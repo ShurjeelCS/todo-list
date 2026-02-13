@@ -5,8 +5,12 @@ function Todo(title, desc, dueDate, priority) {
     this.priority = priority;
 }
 
+function Project(list) {
+    this.list = list;
+}
+
 function test() {
     return "hello mate";
 }
 
-export {Todo, test};
+export {Todo, Project, test};
