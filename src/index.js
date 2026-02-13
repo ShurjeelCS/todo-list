@@ -1,1 +1,3 @@
-console.log("test this");
+import "./styles.css";
+
+console.log("greeting");
