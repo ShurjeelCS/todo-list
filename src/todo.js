@@ -5,8 +5,13 @@ function Todo(title, desc, dueDate, priority) {
     this.priority = priority;
 }
 
-function Project(list) {
-    this.list = list;
+function Project(name) {
+    this.name = name;
+    this.todos = [];
+
+    this.addTodo = function(todo) {
+        this.todos.push(todo);
+    };
 }
 
 function test() {
