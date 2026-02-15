@@ -6,3 +6,10 @@ import { Project } from "./todo";
 
 const project = new Project("default");
 
+const addTask = document.querySelector(".add");
+
+const dialog = document.querySelector(".dialog");
+
+addTask.addEventListener("click", () => {
+    dialog.showModal();
+});

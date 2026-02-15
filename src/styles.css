@@ -12,37 +12,39 @@
 body {
     min-height:100vh;
     font-family: "Cabin", sans-serif;
-    background-color: rgb(18, 19, 20);
-    color : white;
+    background-color: rgb(255, 255, 255);
+    color : rgb(0, 0, 0);
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: auto 1fr auto;
+    /* position: relative; */
 }
 
 nav {
     grid-row: 1/2;
     grid-column: 1/3;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.514);
+    border-bottom: 1px solid rgb(0, 0, 0);
     padding: 1rem;
 
 }
 
 aside {
-    border-right:  1px solid rgba(255, 255, 255, 0.514);
+    border-right:  1px solid rgb(0, 0, 0);
     padding:1rem;
 }
 
 
 footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.514);
+    border-top: 1px solid rgba(0, 0, 0, 0.514);
     grid-column:1/3;
+    background-color: black;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+    border-bottom: 1px solid rgb(0, 0, 0);
     padding:1rem;
 }
 
@@ -51,8 +53,8 @@ footer {
 }
 
 .row button {
-    background-color: red;
-    color: black;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 1rem;
     font-weight: 600;
     border: none;
@@ -61,6 +63,8 @@ footer {
     border-radius: 10px;
 
 }
+
+
 
 
 .material-symbols-outlined {
@@ -107,9 +111,60 @@ footer {
     display: flex;
     gap: 10px;
 }
- 
 
-.taskcheck .checked {
-    border-radius: 59px;
+
+
+.checked {
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
 }
+
+.checked::before {
+    content: '';
+    background-color: #00ffe5;
+    height: 20px;
+    width:20px;
+    border-radius: 50%;
+    background-image: url(check_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    scale: 0;
+    opacity:0;
+    transition: 200ms ease;
+}
+
+.checked:checked::before {
+    scale: 1;
+    opacity: 1;
+}
+
+.dialog {
+    padding: 1rem;
+    margin: auto;
+}   
+
+.dialog h1 {
+    position: relative;
+    width: max-content;
+    margin-bottom: 10px;
+}
+
+.dialog h1::after { 
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: #3F5EFB;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(143, 84, 190, 1) 34%, rgba(148, 83, 186, 1) 51%, rgba(151, 83, 184, 1) 60%, rgba(252, 70, 107, 1) 100%);
+}
+
 

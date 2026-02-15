@@ -1,17 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=calendar_clock" />    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=calendar_clock" />
+    <title>Document</title>
 </head>
+
 <body>
     <nav>
         <h1>My Todo App</h1>
     </nav>
     <aside>
-        <h2>Projects
-
+        <h2>
+            Projects
+            <div class="projects"></div>
         </h2>
     </aside>
     <main>
@@ -20,31 +25,42 @@
                 <h2>Default tasks</h2>
                 <h4>0 tasks remaining</h4>
             </div>
-            <button>
-                Add task
-            </button>
+            <button class="add">Add task</button>
         </div>
+
         
+
         <div class="tasklist">
-            <div>
-                <div class="taskcheck">
-                    <input type="checkbox" class="checked">
-                    <p>Email marketing client feedback</p>
+            <template>
+                <div class="task">
+                    <div class="taskcheck">
+                        <input type="checkbox" class="checked" />
+                        <p>Email marketing client feedback</p>
+                    </div>
+
+                    <div class="due">
+                        <span class="material-symbols-outlined"> calendar_clock </span>
+                        <span>due Dec 18</span>
+                    </div>
                 </div>
-                
-                <div class="due">
-                    <span class="material-symbols-outlined">
-                    calendar_clock
-                    </span>
-                    <span>due Dec 18</span>
-                </div>
-                
-            </div>
-            
+            </template>
         </div>
+
+        <dialog class="dialog">
+            <h1>Add Todo Item</h1>
+            <label for="title">Task title</label>
+            <input type="text" name="title" id="title" />
+            <br>
+            <label for="description">Task description</label>
+            <input type="text" name="description" id="description" />
+            <br>
+            <label for="date">Due date</label>
+            <input type="date" name="date" id="date" />
+        </dialog>
+
+
     </main>
-    <footer>
-        Footer
-    </footer>
+    <footer>Footer</footer>
 </body>
+
 </html>

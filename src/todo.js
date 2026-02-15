@@ -9,7 +9,7 @@ function Project(name) {
     this.name = name;
     this.todos = [];
 
-    this.addTodo = function(todo) {
+    this.addTodo = function (todo) {
         this.todos.push(todo);
     };
 }
@@ -18,4 +18,4 @@ function test() {
     return "hello mate";
 }
 
-export {Todo, Project, test};
+export { Todo, Project, test };
