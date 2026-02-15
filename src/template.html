@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=calendar_clock" />
+href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <title>Document</title>
 </head>
 
@@ -36,15 +36,21 @@
 
         <template id="template">
                 <div class="task">
-                    <div class="taskcheck">
-                        <input type="checkbox" class="checked" />
-                        <p id="todoName">Email marketing client feedback</p>
-                    </div>
+                    
+                    <div>
+                        <div class="taskcheck">
+                            <input type="checkbox" class="checked" />
+                            <p id="todoName">Email marketing client feedback</p>
+                        </div>
 
-                    <div class="due">
-                        <span class="material-symbols-outlined"> calendar_clock </span>
-                        <span id="todoDate">due Dec 18</span>
+                        <div class="due">
+                            <span class="material-symbols-outlined"> calendar_clock </span>
+                            <span id="todoDate">due Dec 18</span>
+                        </div>
                     </div>
+                    <span id="deleteBtn" class="material-symbols-outlined">
+                    delete
+                    </span>
                 </div>
             </template>
 
@@ -69,7 +75,7 @@
 
             <br>
             <div>
-                <button id="close">Close</buttton>
+                <button id="close">Close</button>
                     <button id="addItem">Add item</button>
             </div>
 

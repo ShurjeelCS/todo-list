@@ -75,7 +75,8 @@ font-size: 1rem;
   'wght' 400,
   'GRAD' 0,
   'opsz' 20;
-  font-size:1.4rem;
+  font-size:1.5rem;
+
 }
 
 
@@ -90,10 +91,13 @@ font-size: 1rem;
     gap:1rem
 }
 
-.tasklist > div {
+.task{
     padding: 1rem;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
