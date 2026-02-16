@@ -4,6 +4,10 @@ function Todo(title, desc, dueDate, priority) {
     this.dueDate = dueDate;
     this.priority = priority;
     this.id = self.crypto.randomUUID();
+
+    this.toString = function () {
+        return `${this.title} with ${this.dueDate} date`;
+    }
 }
 
 function Project(name) {
