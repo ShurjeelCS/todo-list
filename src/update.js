@@ -20,7 +20,6 @@ function updateList(project) {
         });
         clone.querySelector("#todoName").textContent = todo.title;
         clone.querySelector("#todoDate").textContent = todo.dueDate;
-        console.log(`the clone date is ${todo.dueDate}`);
         wrapper.appendChild(clone);
     });
 }
