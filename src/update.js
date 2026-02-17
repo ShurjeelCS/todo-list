@@ -4,7 +4,6 @@ import { Project } from "./todo";
 //intialise list of projects
 let projectList = [];
 const project = new Project("default");
-// projectList.push(project);
 
 
 const wrapper = document.querySelector(".tasklist");

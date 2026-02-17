@@ -232,13 +232,20 @@ aside h2 {
 }
 
 .projRow {
-    background-color: #1313ec1f;
+    background-color: #e7e7fd;
+    /* box-shadow: 0px 0px 4px 1px rgba(156, 117, 151, 0.33); */
+    border: 1px solid #e6e6fd;
     border-radius: 10px;
-    padding: .5rem;
+    padding: .75rem;
+    color: #1313ec;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .projName {
     font-weight: 600;
+    font-size: 1.25rem;
 }
 
 
