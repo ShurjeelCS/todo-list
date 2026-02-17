@@ -22,7 +22,19 @@ const addP = document.querySelector("#projectAdd");
 
 const newProject = document.querySelector("#newProjectBtn");
 
+
+
 updateProjects(project);
+
+const container = document.querySelector(".projects");
+
+container.addEventListener("click", (e) => {
+    const card = e.target.closest(".projRow");
+    if (!card) return; // click wasn't on a project row
+
+    card.classList.toggle("altRow");
+});
+
 
 newProject.addEventListener("click", () => {
     dialogtwo.showModal();
