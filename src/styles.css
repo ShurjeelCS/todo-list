@@ -12,7 +12,7 @@
 body {
     min-height:100vh;
     font-family: "Cabin", sans-serif;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     color : black;
     display: grid;
     grid-template-columns: 300px 1fr;
@@ -30,6 +30,7 @@ nav {
 
 nav h1 {
     color : #1313ec;
+    font-size: 1.5rem;
     font-weight: 900;
 }
 
@@ -40,6 +41,11 @@ aside {
     position: relative;
 }
 
+aside h2 {
+    font-size: 1rem;
+
+}
+
 aside .btnRow {
     display: flex;
     justify-content: center;
@@ -48,6 +54,7 @@ aside .btnRow {
 #newProjectBtn {
     position: absolute;
     text-align: center;
+    width: calc(100% - 30px);
     padding: 1rem 3rem;
     border: none;
     color: white;
@@ -177,18 +184,18 @@ footer {
     opacity: 1;
 }
 
-.dialog {
+.dialog, .dialogtwo {
     padding: 1rem;
     margin: auto;
 }   
 
-.dialog h1 {
+.dialog h1, .dialogtwo h1 {
     position: relative;
     width: max-content;
     margin-bottom: 10px;
 }
 
-.dialog h1::after { 
+.dialog h1::after, .dialogtwo h1::after { 
     content: '';
     position: absolute;
     width: 100%;
@@ -204,7 +211,7 @@ footer {
     justify-content: space-between;
 }
 
-.dialog button {
+.dialog button, .dialogtwo button {
     padding: 0.5rem;
     border-radius: 10rem;
     background-color: black;

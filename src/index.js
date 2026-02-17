@@ -11,9 +11,19 @@ const addTask = document.querySelector(".add");
 
 const dialog = document.querySelector(".dialog");
 
+const dialogtwo = document.querySelector(".dialogtwo")
+
 const close = document.querySelector("#close");
 
 const add = document.querySelector("#addItem")
+
+const addP = document.querySelector("#projectAdd");
+
+const newProject = document.querySelector("#newProjectBtn");
+
+newProject.addEventListener("click", () => {
+    dialogtwo.showModal();
+});
 
 close.addEventListener("click", () => {
     dialog.close();
@@ -23,7 +33,13 @@ addTask.addEventListener("click", () => {
     dialog.showModal();
 });
 
-
+addP.addEventListener("click", () => {
+    const projectName = document.querySelector("#projectName").value;
+    const project = new Project(projectName);
+    console.log(project);
+    dialog.close();
+    // updateList(project);
+});
 
 add.addEventListener("click", () => {
     const title = document.querySelector("#title").value;
