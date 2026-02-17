@@ -219,4 +219,26 @@ footer {
     font-weight: 600;
 }
 
+aside h2 {
+    padding: .5rem;
+    font-size: 1rem;
+}
+
+.projects {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projRow {
+    background-color: #1313ec1f;
+    border-radius: 10px;
+    padding: .5rem;
+}
+
+.projName {
+    font-weight: 600;
+}
+
 

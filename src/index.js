@@ -3,9 +3,10 @@ import { Todo } from "./todo";
 import {test} from "./todo";
 import { Project } from "./todo";
 import { updateList } from "./update";
+import { project } from "./update";
+import { projectList } from "./update";
+import { updateProjects } from "./update";
 
-
-const project = new Project("default");
 
 const addTask = document.querySelector(".add");
 
@@ -21,6 +22,8 @@ const addP = document.querySelector("#projectAdd");
 
 const newProject = document.querySelector("#newProjectBtn");
 
+updateProjects(project);
+
 newProject.addEventListener("click", () => {
     dialogtwo.showModal();
 });
@@ -35,10 +38,10 @@ addTask.addEventListener("click", () => {
 
 addP.addEventListener("click", () => {
     const projectName = document.querySelector("#projectName").value;
-    const project = new Project(projectName);
-    console.log(project);
-    dialog.close();
-    // updateList(project);
+    const projectTemp = new Project(projectName);
+    console.log(projectTemp);
+    updateProjects(projectTemp);
+    dialogtwo.close();
 });
 
 add.addEventListener("click", () => {
@@ -54,4 +57,4 @@ add.addEventListener("click", () => {
     //update UI
     updateList(project);
     dialog.close();
-})
+});
