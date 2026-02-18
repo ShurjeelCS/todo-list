@@ -22,7 +22,7 @@ const addP = document.querySelector("#projectAdd");
 
 const newProject = document.querySelector("#newProjectBtn");
 
-
+let index = 0;
 
 updateProjects(project);
 
@@ -31,7 +31,14 @@ const container = document.querySelector(".projects");
 container.addEventListener("click", (e) => {
     const card = e.target.closest(".projRow");
     if (!card) return; // click wasn't on a project row
-
+    const id = card.id;
+    for (let i = 0; i < projectList.length; i++) {
+        if (projectList[i].id === id) {
+            index = i;
+            console.log(`the index is now ${i}`);
+            updateList(projectList[i]);
+        }
+    }
     card.classList.toggle("altRow");
 });
 
@@ -64,9 +71,9 @@ add.addEventListener("click", () => {
     console.log(`${title} and ${description} by ${date} its ${priority}`);
     //create todo object
     const todo = new Todo(title, description, date, priority);
-    project.addTodo(todo);
+    projectList[index].addTodo(todo);
     console.log(project);
     //update UI
-    updateList(project);
+    updateList(projectList[index]);
     dialog.close();
 });

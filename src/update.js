@@ -26,7 +26,7 @@ function updateList(project) {
             project.todos.splice(index, 1);
             console.log(`the projects todo list is ${project.todos}`);
         });
-        console.log(clone.querySelector("#todoName").textContent + "this is what your looking for");
+        // console.log(clone.querySelector("#todoName").textContent + "this is what your looking for");
         clone.querySelector("#todoName").textContent = todo.title;
         clone.querySelector("#todoDate").textContent = todo.dueDate;
         wrapper.appendChild(clone);
@@ -40,6 +40,8 @@ function updateProjects(project) {
     for (let i = 0; i < projectList.length; i++) {
         const clone = temp.content.cloneNode(true);
         clone.querySelector(".projName").textContent = projectList[i].name;
+        const id = clone.querySelector(".projRow");
+        id.setAttribute("id", projectList[i].id);
         container.appendChild(clone);
     }
 }

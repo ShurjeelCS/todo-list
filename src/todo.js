@@ -13,6 +13,7 @@ function Todo(title, desc, dueDate, priority) {
 function Project(name) {
     this.name = name;
     this.todos = [];
+    this.id = self.crypto.randomUUID();
 
     this.addTodo = function (todo) {
         this.todos.push(todo);
